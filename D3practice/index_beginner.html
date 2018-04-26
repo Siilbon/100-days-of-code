@@ -1,0 +1,33 @@
+<head>
+    <h1>
+        Karl Siil
+    </h1>
+    <h2>
+        Practicing D3.js for fun
+    </h2>
+</head>
+
+<body>
+    
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script>
+        /* create a svg canvas, 300 by 100 pixels */
+        var svgCanvas = d3.select('body').append('svg')
+            .attr('width', 300)
+            .attr('height', 100)
+
+        /* Here's the data */
+        var dat = [32, 57, 112, 293];
+
+        /* Select the circles virtually, then bind the data, and add attr*/
+        svgCanvas.selectAll('circle')
+            .data(dat)
+            .enter()
+            .append('circle')
+            .attr('cy', 60)
+            .attr('cx', function (d, i) { return i * 100 + 30; })
+            .attr('r', function (d) { return Math.sqrt(d); })
+
+    </script>
+</body>

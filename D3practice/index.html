@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    /* CSS goes here */
+</style>
+
+<body>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+
+    <script>
+        /* JavaScript goes here */
+        var svg = d3.select('body').append('svg')
+            .attr('height', 1160)
+            .attr('width', 960);
+
+
+
+        d3.json('https://gist.githubusercontent.com/cypranowska/b17359016fd22b81914fd2031cb301f0/raw/9fcd2c3e60c74e8ce8d5c2385d2961f06d815bb9/us.json', function (error, us) {
+            if (error) return console.error(error);
+            console.log(us);
+
+            var states = topojson.feature(us, us.objects.states);
+
+            var projection = d3.geo.albersUsa()
+                .scale(width)
+                .translate([height / 2, width / 2]);
+
+            var path = d3.geo.path()
+                .projection(projection);
+
+
+            svg.append('path')
+                .datum(states)
+                .attr('d', path);
+
+
+
+        });
+
+
+
+
+
+    </script>
+</body>
