@@ -14,3 +14,6 @@ Today I started working on the UCB The Hacker Within Tutorial to learn some D3.j
 I spent the day at work munging data for a conversion project using pandas and so I wanted to work on something totally different.  I kept working on the starter html project on free code camp.  It was all review, but it's good to get more practice.  I'm surprised that \<input\> elements are self closing.  After getting more html practice I'm going to work on using flask as a framework.
 
 ### R1D3 April 27th 2018
+Today I focused on my pandas manipulation at work, I got a couple of free code camps done too.  This weekend I'm going to try to finish the html section of FCC and then migrate from just a html to flask.
+
+### R1D4 April 28th 2018
